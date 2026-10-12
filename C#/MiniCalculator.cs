@@ -14,7 +14,7 @@ switch (operation)
 {
     case "+":
         c = a + b;
-        Console.WriteLine($"Resault: {c}"); 
+        Console.WriteLine($"Result: {c}"); 
         break;
 
     case "-":
