@@ -11,6 +11,7 @@ void avg(float numbers[], int count);
 void factorial(int number);
 void root(float root_number);
 void vector_addition(int vector_x1, int vector_x2, int vector_y1, int vector_y2);
+void vector_subtraction(int vector_x1, int vector_x2, int vector_y1, int vector_y2);
 
 int main () {
     while (running == 1) {
@@ -37,7 +38,8 @@ int main () {
         printf("6. Factorial\n");
         printf("7. Root\n");
         printf("8. Vector Addition\n");
-        printf("9. Exit\n");
+        printf("9. Vector Subtraction\n");
+        printf("10. Exit\n");
 
         printf("Choose operation: ");
         scanf("%d",&operation);
@@ -103,6 +105,17 @@ int main () {
                 vector_addition(vector_x1, vector_x2, vector_y1, vector_y2);
                 break;
             case 9:
+                printf("Enter X1: ");
+                scanf("%d", &vector_x1);
+                printf("Enter X2: ");
+                scanf("%d", &vector_x2);
+                printf("Enter Y1: ");
+                scanf("%d", &vector_y1);
+                printf("Enter Y2: ");
+                scanf("%d", &vector_y2);
+                vector_subtraction(vector_x1, vector_x2, vector_y1, vector_y2);
+                break;
+            case 10:
                 running = 0;
                 break;
         }
@@ -169,5 +182,11 @@ void root(float root_number) {
 void vector_addition(int vector_x1, int vector_x2, int vector_y1, int vector_y2) {
     int x3 = vector_x1 + vector_x2;
     int y3 = vector_y1 + vector_y2;
+    printf("Vector: (%d;%d)\n\n", x3, y3);
+}
+
+void vector_subtraction(int vector_x1, int vector_x2, int vector_y1, int vector_y2) {
+    int x3 = vector_x1 - vector_x2;
+    int y3 = vector_y1 - vector_y2;
     printf("Vector: (%d;%d)\n\n", x3, y3);
 }
